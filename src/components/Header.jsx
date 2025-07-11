@@ -20,7 +20,7 @@ const Header = () => (
           I&apos;m a passionate frontend developer based in Stockholm, currently
           studying at Hyper Island, where I&apos;m deepening my expertise in
           modern web development and user experience design. My journey into is
-          is fueled by a love for creating intuitive and impactful digital
+          fueled by a love for creating intuitive and impactful digital
           experiences. With over a year of hands-on experience, I specialize in
           React, Redux Toolkit, and TypeScript, building responsive and
           accessible web apps using Tailwind CSS and Shadcn/UI. I&apos;ve also
