@@ -2,31 +2,42 @@ import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 import PropTypes from 'prop-types';
 
-const ProjectCard = ({ title, description, color }) => (
-  <div className='bg-white shadow rounded overflow-hidden'>
-    <div
-      className={`${color} h-40 flex items-center justify-center text-white text-xl font-semibold`}
-    >
-      screenshot of project
-    </div>
-    <div className='p-4'>
-      <h3 className='font-bold mb-1'>{title}</h3>
-      <p className='text-sm text-gray-600 mb-3'>{description}</p>
-      <div className='flex gap-4 text-lg'>
-        <a href='#' aria-label='GitHub'>
-          <FaGithub />
+const ProjectCard = ({ title, description, github, live }) => (
+  <div className='bg-white shadow-md rounded-xl p-6 transition hover:shadow-xl'>
+    <h3 className='text-xl font-semibold mb-2'>{title}</h3>
+    <p className='text-gray-700 mb-4'>{description}</p>
+    <div className='flex gap-4 text-lg'>
+      {github && (
+        <a
+          href={github}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='flex items-center text-blue-600 hover:text-blue-800'
+        >
+          <FaGithub className='mr-1' />
+          GitHub
         </a>
-        <a href='#' aria-label='Live demo'>
-          <FiExternalLink />
+      )}
+      {live && (
+        <a
+          href={live}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='flex items-center text-green-600 hover:text-green-800'
+        >
+          <FiExternalLink className='mr-1' />
+          Live Demo
         </a>
-      </div>
+      )}
     </div>
   </div>
 );
+
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
+  github: PropTypes.string,
+  live: PropTypes.string,
 };
 
 export default ProjectCard;

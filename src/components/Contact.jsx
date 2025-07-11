@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => (
   <section className='bg-teal-700 text-white py-16 px-4 md:px-16 flex flex-col md:flex-row gap-8 items-center'>
@@ -26,9 +26,6 @@ const Contact = () => (
           aria-label='LinkedIn'
         >
           <FaLinkedin />
-        </a>
-        <a href='https://twitter.com' aria-label='Twitter'>
-          <FaTwitter />
         </a>
       </div>
     </div>
