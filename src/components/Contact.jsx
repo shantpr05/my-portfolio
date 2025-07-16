@@ -29,14 +29,6 @@ const Contact = () => (
         </a>
       </div>
     </div>
-
-    <div className='md:w-1/2'>
-      <img
-        src='/contact.jpg'
-        alt='Shanthi on the phone'
-        className='rounded shadow-lg'
-      />
-    </div>
   </section>
 );
 
